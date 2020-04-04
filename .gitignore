@@ -1,0 +1,21 @@
+logs/
+*.log
+output/
+
+# Config
+config.json
+config.sh
+config.zsh
+config.bat
+
+# Packages & Distribution
+bin/
+include/
+build/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
