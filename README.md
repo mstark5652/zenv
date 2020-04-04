@@ -1,5 +1,5 @@
 ## zenv
-Script to help manage environment variables for different projects.
+Command line application to manage different environment variables for different projects on your system.
 
 ## Environment Variables
 * ZENV_ENV_PATH
