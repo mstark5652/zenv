@@ -19,6 +19,26 @@ then
         echo "Available Environments:"
         ls $ZENV_ENV_PATH | grep zsh
     fi
+elif [ $1 = 'edit' ]
+then
+    CURRENT_DIR="$(basename `pwd`)"
+    if [ -f $ZENV_ENV_PATH/$CURRENT_DIR.zsh ]
+    then
+        vi $ZENV_ENV_PATH/$CURRENT_DIR.zsh
+    else
+        echo "Did not find matching environment for:" $CURRENT_DIR
+    fi
+elif [ $1 = 'init' ]
+then
+    CURRENT_DIR="$(basename `pwd`)"
+    if [ -f $ZENV_ENV_PATH/$CURRENT_DIR.zsh ]
+    then
+        vi $ZENV_ENV_PATH/$CURRENT_DIR.zsh
+    else
+        touch $ZENV_ENV_PATH/$CURRENT_DIR.zsh
+        echo "#!/bin/zsh\n" > $ZENV_ENV_PATH/$CURRENT_DIR.zsh
+        vi $ZENV_ENV_PATH/$CURRENT_DIR.zsh
+    fi
 elif [ $1 = '.' ]
 then
     CURRENT_DIR="$(basename `pwd`)"

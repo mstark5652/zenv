@@ -4,6 +4,8 @@ Command line application to manage different environment variables for different
 ## Usage
 * `source zenv {environment_name}` will set environment variables for the specified project. For `environment_name` to work, you will need a zsh script setup in the root directory of your env directory. Meaning `$ZENV_ENV_PATH/<environment_name>.zsh` should exist. You can also replace `environment_name` with `.` to use the current directory name.
 * `zenv list` will list available environment.
+* `zenv init` will create a new environment file for the current working directory. If one already exists, it will just go into edit mode.
+* `zenv edit` will open the environment file in edit mode.
 
 ### Example environment file
 ```zsh
